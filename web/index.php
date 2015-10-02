@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php
-            $welcome="Helloo and welcome to Zeltonique's Website";
+            $welcome="Helloo and welcome to Zeltonique's Website. This file has been updated!";
             echo $welcome;
         ?>
     </body>
