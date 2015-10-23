@@ -1,118 +1,87 @@
-<?php
-    require("config.php");
-    $submitted_username = '';
-    if(!empty($_POST)){
-        $query = "
-            SELECT
-                id,
-                username,
-                password,
-                salt,
-                email
-            FROM users
-            WHERE
-                username = :username
-        ";
-        $query_params = array(
-            ':username' => $_POST['username']
-        );
-
-        try{
-            $stmt = $db->prepare($query);
-            $result = $stmt->execute($query_params);
-        }
-        catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
-        $login_ok = false;
-        $row = $stmt->fetch();
-        if($row){
-            $check_password = hash('sha256', $_POST['password'] . $row['salt']);
-            for($round = 0; $round < 65536; $round++){
-                $check_password = hash('sha256', $check_password . $row['salt']);
-            }
-            if($check_password === $row['password']){
-                $login_ok = true;
-            }
-        }
-
-        if($login_ok){
-            unset($row['salt']);
-            unset($row['password']);
-            $_SESSION['user'] = $row;
-            header("Location: secret.php");
-            die("Redirecting to: secret.php");
-        }
-        else{
-            print("Login Failed.");
-            $submitted_username = htmlentities($_POST['username'], ENT_QUOTES, 'UTF-8');
-        }
-    }
-?>
-<!-- Author: Michael Milstead / Mode87.com
-     for Untame.net
-     Bootstrap Tutorial, 2013
--->
-<!doctype html>
-<html lang="en">
+<?php session_start(); ?>
+<!DOCTYPE html PUBLIC>
 <head>
-    <meta charset="utf-8">
-    <title>Student Community</title>
-    <meta name="description" content="Bootstrap Tab + Fixed Sidebar Tutorial with HTML5 / CSS3 / JavaScript">
-    <meta name="author" content="Untame.net">
+<link rel="stylesheet" type="text/css" href="style.css" />
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="assets/bootstrap.min.js"></script>
-    <link href="assets/bootstrap.min.css" rel="stylesheet" media="screen">
-    <style type="text/css">
-        body { background: url(img/book.jpg); }
-        .hero-unit { background-color: #fff; }
-        .center { display: block; margin: 0 auto; }
-    </style>
+
+
 </head>
-
+	<title>Post login</title>
 <body>
 
-<div class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <a class="brand">Student Community</a>
-      <div class="nav-collapse collapse">
-        <ul class="nav pull-right">
-          <li><a href="register.php">Register</a></li>
-          <li class="divider-vertical"></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Log In <strong class="caret"></strong></a>
-            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-                <form action="index.php" method="post">
-                    Username:<br />
-                    <input type="text" name="username" value="<?php echo $submitted_username; ?>" />
-                    <br /><br />
-                    Password:<br />
-                    <input type="password" name="password" value="" />
-                    <br /><br />
-                    <input type="submit" class="btn btn-info" value="Login" />
-                </form>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div id="wrapper">
+	<h2>Student Forumh</h2>
+	
+
+<?php
+if (!isset($_SESSION['username'])) {
+	echo "<form action='login_parse.php' method='post'> 
+	Username: <input type='text' name='username' /><br><br>
+	Password: <input type='password' name='password' /><br><br>
+	<input type='submit' name='submit' value='Log In' /><br><br>
+    </form>
+	";
+} else {
+	echo "<p>You are logged in as ".$_SESSION['username']." &bull; <a href='logout_parse.php'>Logout</a>";
+}
+?>
+    
+      <form action="register.php" method="post" >
+            <p>
+              <label for="username">User Name:</label>
+              <input name="username" type="text" id="username" size="30"/>
+            </p>
+            <p>
+              <label for="email">E-mail:</label>
+              <input name="email" type="text" id="email" size="30"/>
+            </p>
+            <p>
+              <label for="password">Password:</label>
+              <input name="password" type="password" id="password" size="30 "/>
+            </p>
+            <p>
+              <input name="submit" type="submit" value="Submit"/>
+            </p>
+         
+          <?php
+          session_start();
+          if(isset($_SESSION['error']))
+          {
+            echo '<p>'.$_SESSION['error']['username'].'</p>';
+            echo '<p>'.$_SESSION['error']['email'].'</p>';
+            echo '<p>'.$_SESSION['error']['password'].'</p>';
+            unset($_SESSION['error']);
+          }
+          ?>
+           </form
+<hr /><br>
+
+<div id="content">	
+<div class="headingcat">Categories<br>Choose a category to see further posts</div>
+<?php
+/*adding categories to the forum */
+
+include_once("connect.php");
+$sql = "SELECT * FROM categories";
+$res = mysql_query($sql) or die(mysql_error());
+$categories = "";
+if (mysql_num_rows($res)> 0) {
+	while ($row = mysql_fetch_assoc($res)) {
+		$id = $row['id'];
+		$title = $row['category_title'];
+		$description = $row['category_description'];
+		$categories = "<a href='view_category.php?cid=".$id."' class='cat_links'>".$id.". ".$title." - <font size='-1'>".$description."</font></a><br>"; /*append the data to*/
+		echo $categories;
+	}	
+} else {
+	echo "<p>No categories available yet.</p>"; 
+}
+?>
+</div>
 </div>
 
-<div class="container hero-unit">
-    <h1>Join your fellow students and change your way of learning today!</h1>
-    <p>Resources, idees, and study communities and so much more!</p>
-    <h2>Already have an account?</h2>
-    <ul>
-        <li><strong>Login</strong> to access the goodies</li>
-        <li>Or sign up and <strong>Register</strong> yourself, you won't regret it</li>
-    </ul>
-</div>
 
+
+</div>
 </body>
 </html>
