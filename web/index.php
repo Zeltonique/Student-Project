@@ -56,6 +56,7 @@ if (!isset($_SESSION['username'])) {
            </form
 <hr /><br>
 
+<a href="profile.php" class="btn btn-info" role="button">Profile</a>
 <div id="content">	
 <div class="headingcat">Categories<br>Choose a category to see further posts</div>
 <?php

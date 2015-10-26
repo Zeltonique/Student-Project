@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
    $result1 = mysql_query($sql1) or die(mysql_error());
    if (mysql_num_rows($result1) > 0)
             {
-    $_SESSION['error']['username'] = "Ooh SNAP... this email is already registered.";
+    $_SESSION['error']['username'] = "Ooh SNAP... this username is already registered.";
     }
  //whether the email is blank
  if($_POST['email'] == '')
@@ -82,5 +82,6 @@ if(isset($_POST['submit']))
   header("Location: index.php");
   exit;
  }
+}
 }
      ?>

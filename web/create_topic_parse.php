@@ -1,13 +1,3 @@
-<!DOCTYPE html PUBLIC>
-<head>
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<title>Create Forum Topic</title>
-</head>
-<body>
-	
-</body>
-</html>
-
 <?php
 session_start();
 if ($_SESSION['username'] == "") {
@@ -25,7 +15,8 @@ if (isset($_POST['topic_submit'])) {
 		$title = $_POST['topic_title'];
 		$content = $_POST['topic_content'];
 		$creator = $_SESSION['uid'];	
-		$sql = "INSERT INTO topics (category_id, topic_title, topic_creator, topic_date, topic_reply_date) VALUES ('".$cid."','".$title."',$creator, now(), now())";		
+		$sql = "INSERT INTO topics (category_id, topic_title, topic_creator, topic_date, topic_reply_date) VALUES ('".$cid."','".$title."',$creator, now(), now())";	
+        echo $sql;
 		$res = mysql_query($sql) or die(mysql_error());
 		$new_topic_id = mysql_insert_id();
 		$sql2 = "INSERT INTO posts (category_id, topic_id, post_creator, post_content, post_date) VALUES ('".$cid."','".$new_topic_id."',$creator,'".$content."', now())";
@@ -54,3 +45,13 @@ if (isset($_POST['topic_submit'])) {
 
 
 ?>
+
+<!DOCTYPE html PUBLIC>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Create Forum Topic</title>
+</head>
+<body>
+	
+</body>
+</html>

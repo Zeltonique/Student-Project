@@ -15,6 +15,7 @@ if(isset($_POST['submit'])) {
   if( $num_row ==1 )
          {
    $_SESSION['username']=$row['username'];
+   $_SESSION['uid']=$row['id'];
    header("Location: index.php");
    exit;
   }
