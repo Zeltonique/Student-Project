@@ -51,7 +51,7 @@
   <?php
   if (!isset($_SESSION['username'])) {
 
-    echo "<form action='login_parse.php' method='post'>
+    echo "<form action='https://pacific-tor-6903.herokuapp.com/login_parse.php' method='post'>
     <span class='label label-primary'>REGISTERED MEMBERS</span> Please sign in here.<br>
     Username: <input type='text' name='username' /><br><br>
     Password: <input type='password' name='password' /><br><br>
