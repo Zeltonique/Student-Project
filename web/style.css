@@ -3,27 +3,27 @@
 }
 
 form    {
-background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-margin: 0 auto;
-position:relative;
-width:auto;
-height:auto;
-font-size: 14px;
-line-height: 24px;
-font-weight: bold;
-color: #1B76B1;
-text-decoration: none;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-padding:10px;
-border: 1px solid #999;
-border: inset 1px solid #333;
+	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	margin: 0 auto;
+	position:relative;
+	width:auto;
+	height:auto;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #1B76B1;
+	text-decoration: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
 	display:inline-block;
--webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 #wrapper {
@@ -57,8 +57,8 @@ a {
 	border: none;
 	margin-bottom: 5px;
 	background-color: #DCDCDC;
-	color: #000000;	
-	text-decoration: none;	
+	color: #000000;
+	text-decoration: none;
 	font: Open Sans;
 }
 
@@ -70,184 +70,182 @@ a {
 	font: Open Sans;
 }
 #content{
-	
-	
-	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-margin: 0 auto;
-position:relative;
-width:550px;
-height:auto;
 
-font-size: 14px;
-line-height: 24px;
-font-weight: bold;
-color: #1B76B1;
-text-decoration: none;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-padding:10px;
-border: 1px solid #999;
-border: inset 1px solid #333;
+
+	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	margin: 0 auto;
+	position:relative;
+	width:550px;
+	height:auto;
+
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #1B76B1;
+	text-decoration: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
 	display:inline-block;
--webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 #categorycontent{
-	
-	
+
+
 	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-margin: 0 auto;
-position:relative;
-width:600px;
-height:auto;
-font-size: 14px;
-line-height: 24px;
-font-weight: bold;
-color: #1B76B1;
-text-decoration: none;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-padding:10px;
-border: 1px solid #999;
-border: inset 1px solid #333;
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	margin: 0 auto;
+	position:relative;
+	width:600px;
+	height:auto;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #1B76B1;
+	text-decoration: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
 	display:inline-block;
--webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 .headingcat{
 	font-size: 22px;
 	padding-bottom: 10px;
-	
+
 }
 #postreplycontent{
-	
-	
+
+
 	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-margin: 0 auto;
-position:relative;
-width:700px;
-height:auto;
-font-size: 14px;
-line-height: 24px;
-font-weight: bold;
-color: #1B76B1;
-text-decoration: none;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-padding:10px;
-border: 1px solid #999;
-border: inset 1px solid #333;
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	margin: 0 auto;
+	position:relative;
+	width:700px;
+	height:auto;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #1B76B1;
+	text-decoration: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
 	display:inline-block;
--webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 #viewtopiccontent{
-	
-	
+
+
 	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-margin: 0 auto;
-position:relative;
-width:600px;
-height:auto;
-font-size: 14px;
-line-height: 24px;
-font-weight: bold;
-color: #1B76B1;
-text-decoration: none;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-padding:10px;
-border: 1px solid #999;
-border: inset 1px solid #333;
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	margin: 0 auto;
+	position:relative;
+	width:600px;
+	height:auto;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #1B76B1;
+	text-decoration: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
 	display:inline-block;
--webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 #profilecontent{
-	
-	
+
+
 	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-margin: 0 auto;
-position:relative;
-width:auto;
-height:auto;
-font-size: 14px;
-line-height: 24px;
-font-weight: bold;
-color: #1B76B1;
-text-decoration: none;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-padding:10px;
-border: 1px solid #999;
-border: inset 1px solid #333;
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	margin: 0 auto;
+	position:relative;
+	width:auto;
+	height:auto;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #1B76B1;
+	text-decoration: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
 	display:inline-block;
--webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 #createtopiccontent{
-	
-	
+
+
 	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-margin: 0 auto;
-position:relative;
-width:600px;
-height:auto;
-font-size: 14px;
-line-height: 24px;
-font-weight: bold;
-color: #1B76B1;
-text-decoration: none;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-padding:10px;
-border: 1px solid #999;
-border: inset 1px solid #333;
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	margin: 0 auto;
+	position:relative;
+	width:600px;
+	height:auto;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #1B76B1;
+	text-decoration: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
 	display:inline-block;
--webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 .headingcat{
 	font-size: 22px;
 	padding-bottom: 10px;
-	
+
 }
 
 img {
-    height: auto; 
-    width: auto; 
-    max-width: 200px; 
-    max-height:200px;
+	height: auto;
+	width: auto;
+	max-width: 200px;
+	max-height:200px;
 }
 
 .headingcat{
 	font-size: 22px;
 	padding-bottom: 10px;
-	
+
 }
-
-
